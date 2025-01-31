@@ -1,0 +1,191 @@
+{
+  "name": "PancakeSwap Default List",
+  "timestamp": "2021-05-06T00:00:00Z",
+  "version": {
+    "major": 3,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://demo7.velvosoft.com/logo.png",
+  "keywords": ["pancake", "default"],
+  "tokens": [
+    {
+      "name": "WBNB Token",
+      "symbol": "WBNB",
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0xe9e7cea3dedca5984780bafc599bd69add087d56.png"
+    },
+    {
+      "name": "Ethereum Token",
+      "symbol": "ETH",
+      "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
+    },
+	{
+	"name": "Cardano Token",
+	"symbol": "ADA",
+	"address": "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47",
+	"chainId": 56,
+	"decimals": 18,
+	"logoURI": "https://demo7.velvosoft.com/images/tokens/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
+	},
+	
+	
+	{
+	"name": "XRP Token",
+	"symbol": "XRP",
+	"address": "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE",
+	"chainId": 56,
+	"decimals": 18,
+	"logoURI": "https://demo7.velvosoft.com/images/tokens/0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE.png"
+	},
+	
+	{
+	"name": "DAI Token",
+	"symbol": "DAI",
+	"address": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
+	"chainId": 56,
+	"decimals": 18,
+	"logoURI": "https://demo7.velvosoft.com/images/tokens/0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3.png"
+	},
+	
+    {
+      "name": "BTCB Token",
+      "symbol": "BTCB",
+      "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c.png"
+    },
+    {
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x55d398326f99059ff775485246999027b3197955.png"
+    },
+    {
+      "name": "PancakeSwap Token",
+      "symbol": "CAKE",
+      "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82.png"
+    },
+    
+	
+
+	{
+      "name": "Shiba Token",
+      "symbol": "SHIB",
+      "address": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x2859e4544c4bb03966803b044a93563bd2d0dd4d.png"
+    },
+	{
+      "name": "Matic Token",
+      "symbol": "MATIC",
+      "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0xcc42724c6683b7e57334c4e856f4c9965ed682bd.png"
+    },
+	{
+      "name": "Polkadot Token",
+      "symbol": "DOT",
+      "address": "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402.png"
+    },
+	
+	
+	{
+      "name": "BSW",
+      "symbol": "Biswap",
+      "address": "0x965f527d9159dce6288a2219db51fc6eef120dd1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x965f527d9159dce6288a2219db51fc6eef120dd1.png"
+    },
+
+	{
+      "name": "1INCH Network",
+      "symbol": "1INCH",
+      "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x111111111117dc0aa78b770fa6a738034120c302.png"
+    },
+	
+	{
+      "name": "Wrapped Solana",
+      "symbol": "SOL",
+      "address": "0x570A5D26f7765Ecb712C0924E4De545B89fD43dF",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x570A5D26f7765Ecb712C0924E4De545B89fD43dF.png"
+    },
+	{
+      "name": "Binance Peg Litecoin",
+      "symbol": "LTC",
+      "address": "0x4338665CBB7B2485A8855A139b75D5e34AB0DB94",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x4338665CBB7B2485A8855A139b75D5e34AB0DB94.png"
+    },
+	{
+      "name": "Wrapped Near",
+      "symbol": "NEAR",
+      "address": "0x1Fa4a73a3F0133f0025378af00236f3aBDEE5D63",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0x1Fa4a73a3F0133f0025378af00236f3aBDEE5D63.png"
+    },
+	{
+      "name": "Uniswap",
+      "symbol": "UNI",
+      "address": "0xBf5140A22578168FD562DCcF235E5D43A02ce9B1",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0xBf5140A22578168FD562DCcF235E5D43A02ce9B1.png"
+    },
+	{
+      "name": "DOGE Token",
+      "symbol": "DOGE",
+      "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0xbA2aE424d960c26247Dd6c32edC70B295c744C43.png"
+    },
+	{
+      "name": "CZBlue",
+      "symbol": "CZB",
+      "address": "0xd963b2236d227a0302e19f2f9595f424950dc186",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0xd963b2236d227a0302e19f2f9595f424950dc186.png"
+    }
+
+	
+	
+	
+	
+	
+  ]
+}
