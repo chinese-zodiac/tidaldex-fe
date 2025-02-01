@@ -14,6 +14,7 @@ import {
   Text,
   useModal,
 } from '@pancakeswap/uikit'
+import type { Options } from 'easymde'
 import { useHistory } from 'react-router'
 import { useWeb3React } from '@web3-react/core'
 import times from 'lodash/times'
@@ -142,9 +143,10 @@ const CreateProposal = () => {
   }
 
   const options = useMemo(
-    () => ({
-      hideIcons: account === ADMIN_ADDRESS ? [] : ['guide', 'fullscreen', 'preview', 'side-by-side', 'image'],
-    }),
+    () =>
+      ({
+        hideIcons: account === ADMIN_ADDRESS ? [] : ['guide', 'fullscreen', 'preview', 'side-by-side', 'image'],
+      } as Options),
     [account],
   )
 

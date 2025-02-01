@@ -85,7 +85,7 @@ function TransactionSubmittedContent({
               {t('View on BscScan')}
             </Link>
           )}
-         
+
           <Button onClick={onDismiss} mt="20px">
             {t('Close')}
           </Button>

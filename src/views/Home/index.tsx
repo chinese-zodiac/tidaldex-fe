@@ -47,77 +47,56 @@ const Home: React.FC = () => {
   const HomeSectionContainerStyles = { margin: '0', width: '100%', maxWidth: '98%' }
 
   return (
-    <>  
-	    
-	  
-		
-		{/* : 'linear-gradient(180deg, #6FB6F1 0%)' */}
-		
-		<PageSection
-		innerProps={{ style: HomeSectionContainerStyles }}
-		background={
-		  theme.isDark
-			? 'linear-gradient(180deg, #6FB6F1 0%)'
-             : 'linear-gradient(180deg, #fff 0%, #fff 100%)'
-			
-			
-		}
-		index={2}
-		hasCurvedDivider={false}
-		>
-		  <SalesSection {...cakeSectionData} /> 
-		</PageSection>
-		
-		
-		<PageSection
-		innerProps={{ style: HomeSectionContainerStyles }}
-		background={theme.colors.background}
-		index={2}
-		hasCurvedDivider={false}
-		>
-		  <CakeDataRow /> 
-		 <FarmsPoolsRow /> 
-		</PageSection> 
-		
-	   
-	  
-	    <PageSection
-		innerProps={{ style: HomeSectionContainerStyles }}
-		background={theme.colors.gradients.cardHeader}
-		
-		index={2}
-		hasCurvedDivider={false}
-		>
-		<OuterWedgeWrapper>
-		<InnerWedgeWrapper width="150%" top fill={theme.colors.background}>
-		<WedgeTopRight />
-		</InnerWedgeWrapper>
-		</OuterWedgeWrapper>
+    <>
+      {/* : 'linear-gradient(180deg, #6FB6F1 0%)' */}
 
-		</PageSection> 
-	 
-		
-		
-		
-      
+      <PageSection
+        innerProps={{ style: HomeSectionContainerStyles }}
+        background={
+          theme.isDark ? 'linear-gradient(180deg, #6FB6F1 0%)' : 'linear-gradient(180deg, #fff 0%, #fff 100%)'
+        }
+        index={2}
+        hasCurvedDivider={false}
+      >
+        <SalesSection {...cakeSectionData} />
+      </PageSection>
 
+      <PageSection
+        innerProps={{ style: HomeSectionContainerStyles }}
+        background={theme.colors.background}
+        index={2}
+        hasCurvedDivider={false}
+      >
+        <CakeDataRow />
+        <FarmsPoolsRow />
+      </PageSection>
 
+      <PageSection
+        innerProps={{ style: HomeSectionContainerStyles }}
+        background={theme.colors.gradients.cardHeader}
+        index={2}
+        hasCurvedDivider={false}
+      >
+        <OuterWedgeWrapper>
+          <InnerWedgeWrapper width="150%" top fill={theme.colors.background}>
+            <WedgeTopRight />
+          </InnerWedgeWrapper>
+        </OuterWedgeWrapper>
+      </PageSection>
 
-		<PageSection
+      <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         // background="linear-gradient(180deg, #7645D9 0%, #5121B1 100%)"
-	    background={
-		  theme.isDark
-			? 'linear-gradient(180deg, #1f2022 0%, #1f2022 100%)'
-			: 'linear-gradient(180deg, #1f2022  0%, #1f2022  100%)'
-		}
+        background={
+          theme.isDark
+            ? 'linear-gradient(180deg, #1f2022 0%, #1f2022 100%)'
+            : 'linear-gradient(180deg, #1f2022  0%, #1f2022  100%)'
+        }
         index={2}
         hasCurvedDivider={false}
       >
         <Footer />
-      </PageSection> 
-		
-		
+      </PageSection>
     </>
   )
 }

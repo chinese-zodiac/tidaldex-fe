@@ -2,15 +2,14 @@ import { MenuEntry } from '@pancakeswap/uikit'
 import { ContextApi } from 'contexts/Localization/types'
 
 const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
-   
-	{
-		label: t('Home'),
-		// icon: 'Link2Icon',
-		icon: 'HomeIcon',
-	    href: '/',
-		},
-		
-		/* items: [
+  {
+    label: t('Home'),
+    // icon: 'Link2Icon',
+    icon: 'HomeIcon',
+    href: '/',
+  },
+
+  /* items: [
 		   
 			{
 			label: t('Testnet'),
@@ -18,10 +17,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
 			},
 				
 		], */
-		
-		
-      
-		
+
   {
     label: t('Trade'),
     icon: 'TradeIcon',
@@ -33,13 +29,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
       {
         label: t('Liquidity'),
         href: '/pool',
-
       },
     ],
   },
- 
- 
-   {
+
+  {
     label: t('Farms'),
     icon: 'FarmIcon',
     href: '/farms',
@@ -48,57 +42,26 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     label: t('Pools'),
     icon: 'PoolIcon',
     href: '/pools',
-  }, 
-  
-  
-  {
-		label: t('More'),
-		icon: 'MoreIcon',
+  },
 
-		items: [
-				/* {
+  {
+    label: t('More'),
+    icon: 'MoreIcon',
+
+    items: [
+      /* {
 				label: t('Info'),
 				icon: 'InfoIcon',
 				href: 'https://info.tidaldex.com',
 				}, */
-				
-				
-				
-				{
-				label: t('Docs'),
-				icon: 'InfoIcon',
-				href: 'https://docs.tidaldex.com/',
-				}, 
-				
-				
-				
-				
-		],},
-		
-		
- 
-  
-				
-				
-				
-				
-				 
-				
-				 
-				
-				
-				
-				
-		
-  
-       
- 
-	
-	
-	
-	
-	
 
+      {
+        label: t('Docs'),
+        icon: 'InfoIcon',
+        href: 'https://docs.tidaldex.com/',
+      },
+    ],
+  },
 ]
 
 export default config

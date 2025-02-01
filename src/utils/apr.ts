@@ -28,7 +28,7 @@ export const getPoolApr = (
  * @param cakePriceUsd Cake price in USD
  * @param poolLiquidityUsd Total pool liquidity in USD
  * @returns
- *  maniapr apr (100) replace (12610300) 
+ *  maniapr apr (100) replace (12610300)
  */
 export const getFarmApr = (
   poolWeight: BigNumber,

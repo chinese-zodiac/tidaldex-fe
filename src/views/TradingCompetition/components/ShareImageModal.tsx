@@ -48,13 +48,13 @@ const ShareImageModal: React.FC<YourScoreProps> = ({ onDismiss, profile, userLea
     if (rank === 1) {
       return MedalGold
     }
-    if (rank <= 10) {
+    if (Number(rank) <= 10) {
       return MedalSilver
     }
-    if (rank <= 100) {
+    if (Number(rank) <= 100) {
       return MedalBronze
     }
-    if (rank <= 500) {
+    if (Number(rank) <= 500) {
       return MedalPurple
     }
     return MedalTeal

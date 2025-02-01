@@ -1,4 +1,7 @@
 # Dex & Farms Frontend
 
-yarn build (may need to run x2)
-yarn start
+Use npm version 18.20.6
+
+Use yarn start to run the frontend.
+
+Use yarn build to build the frontend.

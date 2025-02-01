@@ -65,10 +65,10 @@ const FarmsPoolsRow = () => {
   }
 
   return (
-    <div className='syrupmain' ref={observerRef}>
-      <Flex className='poolsmain' flexDirection="column" mt="24px">
-        <Flex className='poolstitle' mb="24px">
-          <RowHeading  text={showFarms ? t('Top Farms') : t('Top Syrup Pools')} />
+    <div className="syrupmain" ref={observerRef}>
+      <Flex className="poolsmain" flexDirection="column" mt="24px">
+        <Flex className="poolstitle" mb="24px">
+          <RowHeading text={showFarms ? t('Top Farms') : t('Top Syrup Pools')} />
           <IconButton
             variant="text"
             height="100%"
@@ -76,7 +76,6 @@ const FarmsPoolsRow = () => {
             onClick={() => {
               setShowFarms((prev) => !prev)
               clearInterval(timer.current)
-              
             }}
           >
             <SwapVertIcon height="24px" width="24px" color="#0097e1" />

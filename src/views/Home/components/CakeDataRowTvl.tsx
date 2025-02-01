@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useTotalSupply, useBurnedBalance} from 'hooks/useTokenBalance'
+import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import { getCakeAddress } from 'utils/addressHelpers'
-import { getBalanceNumber, formatLocalisedCompactNumber,formatNumber } from 'utils/formatBalance'
+import { getBalanceNumber, formatLocalisedCompactNumber, formatNumber } from 'utils/formatBalance'
 import { usePriceCakeBusd } from 'state/farms/hooks'
 import { Flex, Text, Heading, Skeleton } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
@@ -47,19 +47,19 @@ const CakeDataRowTvl = () => {
   const { t } = useTranslation()
   const totalSupply = useTotalSupply()
   const burnedBalance = getBalanceNumber(useBurnedBalance(getCakeAddress()))
-  const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - burnedBalance : 0  
+  const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - burnedBalance : 0
   const CirculationBalance = cakeSupply
   const cakePriceBusd = usePriceCakeBusd()
-  const mcap = cakePriceBusd.times(cakeSupply )
+  const mcap = cakePriceBusd.times(cakeSupply)
   const mcapString = formatNumber(mcap.toNumber())
-  
+
   // const mcapString = formatLocalisedCompactNumber(mcap.toNumber())
 
   return (
     <Grid>
       <Flex flexDirection="column">
         <Text color="textSubtle">{t('Total supply')}</Text>
-		{CirculationBalance ? (
+        {CirculationBalance ? (
           <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={CirculationBalance} />
         ) : (
           <Skeleton height={24} width={126} my="4px" />
@@ -78,8 +78,8 @@ const CakeDataRowTvl = () => {
           <Skeleton height={24} width={126} my="4px" />
         )}
       </StyledColumn>
-	  
-	 {/* <StyledColumn>
+
+      {/* <StyledColumn>
         <Text color="textSubtle">{t('TVL')}</Text>
         {CirculationBalance ? (
           <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={CirculationBalance} />
@@ -87,7 +87,7 @@ const CakeDataRowTvl = () => {
           <Skeleton height={24} width={126} my="4px" />
         )}
       </StyledColumn> */}
-	  
+
       <StyledColumn noMobileBorder>
         <Text color="textSubtle">{t('Market cap')}</Text>
         {mcap?.gt(0) && mcapString ? (
@@ -106,5 +106,3 @@ const CakeDataRowTvl = () => {
 }
 
 export default CakeDataRowTvl
-
-

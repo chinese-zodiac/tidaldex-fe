@@ -50,8 +50,7 @@ export const earnSectionData: SalesSectionProps = {
 
 export const cakeSectionData: SalesSectionProps = {
   headingText: 'Tidaldex',
-  bodyText:
-    'Trade, stake, and savor the sweetness of crypto on the most rewarding decentralized platform',
+  bodyText: 'Trade, stake, and savor the sweetness of crypto on the most rewarding decentralized platform',
   reverse: false,
   primaryButton: {
     to: '/swap?outputCurrency=0xd963b2236d227a0302e19f2f9595f424950dc186',
@@ -67,12 +66,11 @@ export const cakeSectionData: SalesSectionProps = {
   images: {
     path: '/images/home/trade/',
     attributes: [
-    
       { src: 'Tidaldex', alt: 'Tidaldex token' },
-	  
-	  // { src: 'BNB', alt: 'BNB token' },
-     // { src: 'BTC', alt: 'BTC token' },
-     // { src: 'CAKE', alt: 'CAKE token' },
+
+      // { src: 'BNB', alt: 'BNB token' },
+      // { src: 'BTC', alt: 'BTC token' },
+      // { src: 'CAKE', alt: 'CAKE token' },
     ],
   },
 }

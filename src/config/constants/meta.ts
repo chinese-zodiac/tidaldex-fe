@@ -3,8 +3,7 @@ import { PageMeta } from './types'
 
 export const DEFAULT_META: PageMeta = {
   title: 'Tidaldex - (BSC)',
-  description:
-    'Earn CZB  through yield farming ',
+  description: 'Earn CZB  through yield farming ',
   image: 'https://tidaldex.com/images/swapimg/twitter.png',
 }
 

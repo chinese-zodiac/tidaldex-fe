@@ -59,11 +59,7 @@ const ChartDisclaimer: React.FC<InjectedModalProps> = ({ onDismiss }) => {
         <Text as="p" mb="16px" fontSize="14px" color="textSubtle">
           {t("Only the price from Chainlink (shown on the cards) determines the round's result.")}
         </Text>
-        <LinkExternal
-          href="https://docs.pancakeswap.finance"
-          external
-          mb="24px"
-        >
+        <LinkExternal href="https://docs.pancakeswap.finance" external mb="24px">
           {t('Learn More')}
         </LinkExternal>
         <Box>

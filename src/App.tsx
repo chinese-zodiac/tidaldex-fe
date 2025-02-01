@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
 import { ResetCSS } from '@pancakeswap/uikit'
 import BigNumber from 'bignumber.js'
 import useEagerConnect from 'hooks/useEagerConnect'
@@ -61,57 +61,36 @@ const App: React.FC = () => {
   usePollCoreFarmData()
 
   return (
-    <Router>
+    <HashRouter>
       <ResetCSS />
       <GlobalStyle />
       <GlobalCheckClaimStatus excludeLocations={['/collectibles']} />
       <Menu>
         <SuspenseWithChunkError fallback={<PageLoader />}>
           <Switch>
-           <Route path="/" exact>
-             <Home />
+            <Route path="/" exact>
+              <Home />
             </Route>
             <Route exact path="/farms/auction">
               <FarmAuction />
             </Route>
-           <Route path="/farms"> 
-             <Farms /> 
+            <Route path="/farms">
+              <Farms />
             </Route>
             <Route path="/pools">
-			 <Pools /> 
-            </Route> 
+              <Pools />
+            </Route>
             <Route path="/lottery">
-            <Lottery /> 
-            </Route>
-            <Route path="/ifo">
-            {/*  <Ifos /> */}
-            </Route>
-            <Route path="/collectibles">
-              {/* <Collectibles /> */}
-            </Route>
-            <Route exact path="/teams">
-              {/* <Teams /> */}
-            </Route>
-            <Route path="/teams/:id">
-              {/* <Team /> */}
-            </Route>
-            <Route path="/profile">
-             {/* <Profile /> */}
-            </Route>
-            <Route path="/competition">
-             {/* <TradingCompetition /> */}
-            </Route>
-            <Route path="/prediction">
-              {/* <Predictions /> */}
+              <Lottery />
             </Route>
             <Route exact path="/voting">
               <Voting />
             </Route>
             <Route exact path="/voting/proposal/create">
-               <CreateProposal /> 
+              <CreateProposal />
             </Route>
             <Route path="/voting/proposal/:id">
-               <Proposal /> 
+              <Proposal />
             </Route>
 
             {/* Using this format because these components use routes injected props. We need to rework them with hooks */}
@@ -144,18 +123,16 @@ const App: React.FC = () => {
               <Redirect to="/collectibles" />
             </Route>
 
-	
-
             {/* 404 */}
             {/* <Route component={NotFound} /> */}
-			<Route component={Home} />
+            <Route component={Home} />
           </Switch>
         </SuspenseWithChunkError>
       </Menu>
       <EasterEgg iterations={2} />
       <ToastListener />
       <DatePickerPortal />
-    </Router>
+    </HashRouter>
   )
 }
 

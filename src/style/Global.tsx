@@ -6,7 +6,7 @@ declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
   export interface DefaultTheme extends PancakeTheme {}
 }
-  /*  font-family: 'Poppins', sans-serif; */
+/*  font-family: 'Poppins', sans-serif; */
 const GlobalStyle = createGlobalStyle`
   * {
    

@@ -62,25 +62,25 @@ const CardUserInfo: React.FC<YourScoreProps> = ({
         next: null,
       }
     }
-    if (currentRank <= 10) {
+    if (Number(currentRank) <= 10) {
       return {
         current: <MedalSilverIcon />,
         next: <MedalGoldIcon />,
       }
     }
-    if (currentRank <= 100) {
+    if (Number(currentRank) <= 100) {
       return {
         current: <MedalBronzeIcon />,
         next: <MedalSilverIcon />,
       }
     }
-    if (currentRank <= 500) {
+    if (Number(currentRank) <= 500) {
       return {
         current: <MedalPurpleIcon />,
         next: <MedalBronzeIcon />,
       }
     }
-    if (currentRank > 500) {
+    if (Number(currentRank) > 500) {
       return {
         current: <MedalTealIcon />,
         next: <MedalPurpleIcon />,
@@ -99,25 +99,25 @@ const CardUserInfo: React.FC<YourScoreProps> = ({
         rank: null,
       }
     }
-    if (currentRank <= 10) {
+    if (Number(currentRank) <= 10) {
       return {
         color: 'GOLD',
         rank: 1,
       }
     }
-    if (currentRank <= 100) {
+    if (Number(currentRank) <= 100) {
       return {
         color: 'SILVER',
         rank: 10,
       }
     }
-    if (currentRank <= 500) {
+    if (Number(currentRank) <= 500) {
       return {
         color: 'BRONZE',
         rank: 100,
       }
     }
-    if (currentRank > 500) {
+    if (Number(currentRank) > 500) {
       return {
         color: 'PURPLE',
         rank: 500,
@@ -134,7 +134,7 @@ const CardUserInfo: React.FC<YourScoreProps> = ({
       return t('Check your Rank')
     }
     if (!hasRegistered) {
-      return t('You’re not participating this time.')
+      return t("You're not participating this time.")
     }
     return `@${profile.username}`
   }
@@ -144,7 +144,7 @@ const CardUserInfo: React.FC<YourScoreProps> = ({
       return t('Connect wallet to view')
     }
     if (!hasRegistered) {
-      return t('Sorry, you needed to register during the “entry” period!')
+      return t('Sorry, you needed to register during the "entry" period!')
     }
     return `${profile.team.name}`
   }

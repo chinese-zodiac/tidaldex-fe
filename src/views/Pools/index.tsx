@@ -101,8 +101,8 @@ const Pools: React.FC = () => {
     const cakePool = poolsWithoutAutoVault.find((pool) => pool.sousId === 0)
     const cakeAutoVault = { ...cakePool, isAutoVault: false }
     return [...poolsWithoutAutoVault]
-	// mani const cakeAutoVault = { ...cakePool, isAutoVault: true }
-   // mani return [cakeAutoVault, ...poolsWithoutAutoVault] 
+    // mani const cakeAutoVault = { ...cakePool, isAutoVault: true }
+    // mani return [cakeAutoVault, ...poolsWithoutAutoVault]
   }, [poolsWithoutAutoVault])
 
   // TODO aren't arrays in dep array checked just by reference, i.e. it will rerender every time reference changes?
@@ -241,18 +241,13 @@ const Pools: React.FC = () => {
       <PageHeader>
         <Flex className="poolbanner" justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
           <Flex flex="1" flexDirection="column" mr={['8px', 0]}>
-     
-	 
-	 <Heading as="h1" scale="xl" color="secondary" mb="24px">
-          {t('Syrup Pools')}
-        </Heading>
-        <Heading scale="lg" color="text">
-          {t('Just stake some tokens to earn. High APR, low risk.')}
-        </Heading>
-            
-           
+            <Heading as="h1" scale="xl" color="secondary" mb="24px">
+              {t('Syrup Pools')}
+            </Heading>
+            <Heading scale="lg" color="text">
+              {t('Just stake some tokens to earn. High APR, low risk.')}
+            </Heading>
           </Flex>
-       
         </Flex>
       </PageHeader>
       <Page>
@@ -311,7 +306,7 @@ const Pools: React.FC = () => {
             <Loading />
           </Flex>
         )}
-        {viewMode === ViewMode.CARD ? cardLayout : cardLayout} 
+        {viewMode === ViewMode.CARD ? cardLayout : cardLayout}
         <div ref={loadMoreRef} />
         <Image
           mx="auto"

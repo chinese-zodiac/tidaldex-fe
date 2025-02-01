@@ -53,7 +53,7 @@ const TopFarmPool: React.FC<TopFarmPoolProps> = ({ title, percentage, index, vis
 
   return (
     <StyledWrapper index={index}>
-      <AbsoluteWrapper className='sbox' index={index} visible={visible} topOffset={topOffset()}>
+      <AbsoluteWrapper className="sbox" index={index} visible={visible} topOffset={topOffset()}>
         {title ? (
           <Text bold mb="8px" fontSize="18px" color="#000">
             {title}

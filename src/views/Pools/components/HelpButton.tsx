@@ -27,8 +27,8 @@ const HelpButton = () => {
   const { t } = useTranslation()
   return (
     <StyledLink external>
-      <Button px={['14px', null, null, null, '20px']} variant="subtle" display='none'>
-        <ButtonText color="backgroundAlt" bold fontSize="16px" >
+      <Button px={['14px', null, null, null, '20px']} variant="subtle" display="none">
+        <ButtonText color="backgroundAlt" bold fontSize="16px">
           {t('Help')}
         </ButtonText>
         <HelpIcon color="backgroundAlt" ml={[null, null, null, 0, '6px']} />

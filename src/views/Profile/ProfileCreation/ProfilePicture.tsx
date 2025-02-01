@@ -23,7 +23,7 @@ const NftWrapper = styled.div`
 `
 
 const ProfilePicture: React.FC = () => {
-  const { library } = useWeb3React()
+  const { provider } = useWeb3React()
   const [isApproved, setIsApproved] = useState(false)
   const [isApproving, setIsApproving] = useState(false)
   const { selectedNft, actions } = useContext(ProfileCreationContext)
@@ -34,7 +34,7 @@ const ProfilePicture: React.FC = () => {
   const { callWithGasPrice } = useCallWithGasPrice()
 
   const handleApprove = async () => {
-    const contract = getErc721Contract(selectedNft.nftAddress, library.getSigner())
+    const contract = getErc721Contract(selectedNft.nftAddress, provider.getSigner())
     const tx = await callWithGasPrice(contract, 'approve', [getPancakeProfileAddress(), selectedNft.tokenId])
     setIsApproving(true)
     const receipt = await tx.wait()

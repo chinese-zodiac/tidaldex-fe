@@ -35,16 +35,16 @@ const ProfileUserMenuItem: React.FC<ProfileUserMenuItemProps> = ({ isLoading, ha
     return (
       <UserMenuItem as="button" onClick={handleClick}>
         <Flex alignItems="center" justifyContent="space-between" width="100%">
-          {t('Exchange')}   {/* {t('Make a Profile')} */}
-           {/* <Dot /> */}
-        </Flex> 
-      </UserMenuItem> 
+          {t('Exchange')} {/* {t('Make a Profile')} */}
+          {/* <Dot /> */}
+        </Flex>
+      </UserMenuItem>
     )
-  } 
+  }
 
   return (
     <UserMenuItem as="button" onClick={handleClick}>
-     {t('Exchange')}  {/* {t('Your Profile')} */}
+      {t('Exchange')} {/* {t('Your Profile')} */}
     </UserMenuItem>
   )
 }

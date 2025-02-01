@@ -249,7 +249,7 @@ const Hero = () => {
   return (
     <Flex flexDirection="column" alignItems="center" justifyContent="center">
       <Decorations />
-     {/*  <StarsDecorations display={['none', 'none', 'block']}>
+      {/*  <StarsDecorations display={['none', 'none', 'block']}>
         <img src="/images/lottery/star-big.png" width="124px" height="109px" alt="" />
         <img src="/images/lottery/star-small.png" width="70px" height="62px" alt="" />
         <img src="/images/lottery/three-stars.png" width="130px" height="144px" alt="" />
@@ -260,7 +260,7 @@ const Hero = () => {
         {t('The Tidaldex Lottery')}
       </Heading>
       {getHeroHeading()}
-        {/* <TicketContainer
+      {/* <TicketContainer
         position="relative"
         width={['240px', '288px']}
         height={['94px', '113px']}

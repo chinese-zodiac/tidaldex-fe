@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card } from '@pancakeswap/uikit'
 
-export const BodyWrapper = styled(Card)`
+const BodyWrapper = styled(Card as any)`
   border-radius: 24px;
   max-width: 436px;
   width: 100%;

@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {  ButtonMenuItem } from '@pancakeswap/uikit'
-
-
-
+import { ButtonMenuItem } from '@pancakeswap/uikit'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -19,17 +16,12 @@ const Wrapper = styled.div`
   }
 `
 
-
-
 const Footer = () => {
-  
   return (
-    <Wrapper >
-     
-          <ButtonMenuItem as="a" display="none">
-           Tidaldex
-          </ButtonMenuItem>
-        
+    <Wrapper>
+      <ButtonMenuItem as="a" display="none">
+        Tidaldex
+      </ButtonMenuItem>
     </Wrapper>
   )
 }

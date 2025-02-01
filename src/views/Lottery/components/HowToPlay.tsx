@@ -316,7 +316,7 @@ const HowToPlay: React.FC = () => {
               </Text>
             </li>
           </BulletList>
-         {/*  <Heading my="16px" scale="md">
+          {/*  <Heading my="16px" scale="md">
             {t('CZB Injections')}
           </Heading>
           <BulletList>
@@ -347,9 +347,7 @@ const HowToPlay: React.FC = () => {
           </Heading>
           <Text>
             {t('Check our in-depth guide on')}{' '}
-            <InlineLink href="https://docs.pancakeswap.finance/">
-              {t('how to play the Tidaldex lottery!')}
-            </InlineLink>
+            <InlineLink href="https://docs.pancakeswap.finance/">{t('how to play the Tidaldex lottery!')}</InlineLink>
           </Text>
         </Flex>
       </Flex>

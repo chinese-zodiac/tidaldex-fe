@@ -99,58 +99,48 @@ const Footer = () => {
         <BottomRightImgWrapper>
           <CompositeImage {...bottomRightImage} maxHeight="256px" />
         </BottomRightImgWrapper>
-      </FloatingPancakesWrapper>	
-	  
-	  
+      </FloatingPancakesWrapper>
 
       <Wrapper className="mainfooter">
-	  
-	    <Wrapper className="div1">
-        <Heading className="heading" mb="24px" scale="xl" color="white">
-          {t('Join the TidalDex community')}
-        </Heading>
-        <Text className="subtext" textAlign="center" color="white">
-          {t('Take part in the conversation! Stay in the know & be the first to hear about any new updates')}
-        </Text>
-		</Wrapper>
-		
-		<Wrapper className="div2">
-		
-		<Wrapper className="socialbox">
-		
-        <Link className="telegram" external href="https://t.me/">
-          {t('')}
-        </Link>
-		<Link className="twitter" external href="https://twitter.com/tidaldex">
-		  {t('')}
-        </Link>
-		<Link className="facebook" external href="https://www.facebook.com/tidaldex">
-		  {t('')}
-        </Link>
-		<Link className="linkedin" external href="https://www.linkedin.com/company/tidaldex/">
-		  {t('')}
-        </Link>
-		<Link className="instagram" external href="https://www.instagram.com/tidaldex/">
-		  {t('')}
-        </Link>
-		
-		<Link className="youtube" external href="https://www.youtube.com/@tidaldex">
-		  {t('')}
-        </Link>
-		
-		<Link className="pinterest" external href="https://sk.pinterest.com/tidaldex/">
-		  {t('')}
-        </Link>
-		<Link className="tiktok" external href="https://www.tiktok.com/@tidaldex">
-		  {t('')}
-        </Link>
-		
-		
-		
-		</Wrapper>
-       
-		</Wrapper>
-		
+        <Wrapper className="div1">
+          <Heading className="heading" mb="24px" scale="xl" color="white">
+            {t('Join the TidalDex community')}
+          </Heading>
+          <Text className="subtext" textAlign="center" color="white">
+            {t('Take part in the conversation! Stay in the know & be the first to hear about any new updates')}
+          </Text>
+        </Wrapper>
+
+        <Wrapper className="div2">
+          <Wrapper className="socialbox">
+            <Link className="telegram" external href="https://t.me/">
+              {t('')}
+            </Link>
+            <Link className="twitter" external href="https://twitter.com/tidaldex">
+              {t('')}
+            </Link>
+            <Link className="facebook" external href="https://www.facebook.com/tidaldex">
+              {t('')}
+            </Link>
+            <Link className="linkedin" external href="https://www.linkedin.com/company/tidaldex/">
+              {t('')}
+            </Link>
+            <Link className="instagram" external href="https://www.instagram.com/tidaldex/">
+              {t('')}
+            </Link>
+
+            <Link className="youtube" external href="https://www.youtube.com/@tidaldex">
+              {t('')}
+            </Link>
+
+            <Link className="pinterest" external href="https://sk.pinterest.com/tidaldex/">
+              {t('')}
+            </Link>
+            <Link className="tiktok" external href="https://www.tiktok.com/@tidaldex">
+              {t('')}
+            </Link>
+          </Wrapper>
+        </Wrapper>
       </Wrapper>
     </>
   )

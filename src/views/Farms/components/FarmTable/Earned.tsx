@@ -4,6 +4,7 @@ import { Skeleton } from '@pancakeswap/uikit'
 
 export interface EarnedProps {
   earnings: number
+  pid?: number
 }
 
 interface EarnedPropsWithLoading extends EarnedProps {

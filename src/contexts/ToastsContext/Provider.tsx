@@ -56,11 +56,7 @@ export const ToastsProvider: React.FC = ({ children }) => {
     toastWarning,
   }
 
-  return (
-    <ToastsContext.Provider value={contextValue}>
-      {children}
-    </ToastsContext.Provider>
-  )
+  return <ToastsContext.Provider value={contextValue}>{children}</ToastsContext.Provider>
 }
 
 // New hook to use the context

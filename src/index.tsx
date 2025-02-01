@@ -29,12 +29,12 @@ function Blocklist({ children }: { children: ReactNode }) {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Blocklist>
-      <Providers>
+    <Providers>
+      <Blocklist>
         <Updaters />
         <App />
-      </Providers>
-    </Blocklist>
+      </Blocklist>
+    </Providers>
   </React.StrictMode>,
   document.getElementById('root'),
 )

@@ -15,8 +15,7 @@ const farms: FarmConfig[] = [
     token: tokens.syrup,
     quoteToken: tokens.wbnb,
   },
- 
- 
+
   {
     pid: 1,
     lpSymbol: 'CZB-BNB LP',
@@ -27,7 +26,7 @@ const farms: FarmConfig[] = [
     token: tokens.czb,
     quoteToken: tokens.wbnb,
   },
-  
+
   {
     pid: 2,
     lpSymbol: 'BUSD-BNB LP',
@@ -38,10 +37,6 @@ const farms: FarmConfig[] = [
     token: tokens.busd,
     quoteToken: tokens.wbnb,
   },
-  
-  
-    
-
 ]
 
 export default farms

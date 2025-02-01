@@ -382,8 +382,7 @@ const Farms: React.FC = () => {
 
   return (
     <>
-     <PageHeader>
-	 
+      <PageHeader>
         <Heading as="h1" scale="xl" color="secondary" mb="24px">
           {t('Farms')}
         </Heading>
@@ -392,7 +391,7 @@ const Farms: React.FC = () => {
         </Heading>
       </PageHeader>
       <Page>
-         <ControlContainer>
+        <ControlContainer>
           <ViewControls>
             <ToggleView viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
             <ToggleWrapper>
@@ -435,15 +434,15 @@ const Farms: React.FC = () => {
               <SearchInput onChange={handleChangeQuery} placeholder="Search Farms" />
             </LabelWrapper>
           </FilterContainer>
-        </ControlContainer> 
-        {renderContent()} 
+        </ControlContainer>
+        {renderContent()}
         {account && !userDataLoaded && stakedOnly && (
-        <Flex justifyContent="center">
+          <Flex justifyContent="center">
             <Loading />
-          </Flex> 
+          </Flex>
         )}
         <div ref={loadMoreRef} />
-         <StyledImage src="/images/decorations/3d.png" alt="Tidaldex illustration" width={110} height={93} /> 
+        <StyledImage src="/images/decorations/3d.png" alt="Tidaldex illustration" width={110} height={93} />
       </Page>
     </>
   )
