@@ -17,49 +17,46 @@ const useAuth = () => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const { connector, provider, chainId } = useWeb3React()
-  const { toastError } = useToast()
+  const { toastError, toastInfo } = useToast()
   const login = useCallback(
-    (connectorID: ConnectorNames) => {
+    async (connectorID: ConnectorNames) => {
       const selectedConnector = connectorsByName[connectorID]
       console.log(selectedConnector)
       if (selectedConnector) {
-        console.log(true)
         try {
-          console.log('trying')
-          selectedConnector.activate(parseInt(process.env.REACT_APP_CHAIN_ID, 10))
-          /*
-            async (error: Error) => {
-            console.log("Inside activate")
-            console.log(error)
-            if (error.name === 'UnsupportedChainIdError') {
-              const hasSetup = await setupNetwork()
-              if (hasSetup) {
-                selectedConnector.activate(parseInt(process.env.REACT_APP_CHAIN_ID, 10))
-              }
-            } else {
-              window.localStorage.removeItem(connectorLocalStorageKey)
-              if (error instanceof NoEthereumProviderError || error instanceof NoBscProviderError) {
-                toastError(t('Provider Error'), t('No provider was found'))
-              } else if (
-                error instanceof UserRejectedRequestErrorInjected
-              ) {
-                toastError(t('Authorization Error'), t('Please authorize to access your account'))
-              } else {
-                toastError(error.name, error.message)
-              }
-            }
-          } */
-          console.log('activated')
+          if (connectorID === ConnectorNames.WalletConnect) {
+            toastInfo('WalletConnect loading...')
+            await selectedConnector.deactivate()
+            await selectedConnector.activate(parseInt(process.env.REACT_APP_CHAIN_ID, 10))
+            toastInfo('WalletConnect loaded')
+          } else {
+            await selectedConnector.activate(parseInt(process.env.REACT_APP_CHAIN_ID, 10))
+          }
         } catch (error) {
-          console.log('catch')
-          console.error('Failed to activate connector:', error)
+          console.log('Inside activate error')
+          console.log(error)
+          if (error.name === 'UnsupportedChainIdError') {
+            const hasSetup = await setupNetwork()
+            if (hasSetup) {
+              selectedConnector.activate(parseInt(process.env.REACT_APP_CHAIN_ID, 10))
+            }
+          } else {
+            window.localStorage.removeItem(connectorLocalStorageKey)
+            if (error instanceof NoEthereumProviderError || error instanceof NoBscProviderError) {
+              toastError(t('Provider Error'), t('No provider was found'))
+            } else if (error instanceof UserRejectedRequestErrorInjected) {
+              toastError(t('Authorization Error'), t('Please authorize to access your account'))
+            } else {
+              toastError(error.name, error.message)
+            }
+          }
         }
       } else {
         console.log('else')
         toastError(t('Unable to find connector'), t('The connector config is wrong'))
       }
     },
-    [t, toastError],
+    [t, toastError, toastInfo],
   )
 
   const logout = useCallback(() => {
@@ -70,10 +67,12 @@ const useAuth = () => {
       connector?.resetState()
     }
     // This localStorage key is set by @web3-react/walletconnect-connector
+    /*
     if (window.localStorage.getItem('walletconnect')) {
       connectorsByName.walletconnect.close()
       connectorsByName.walletconnect.walletConnectProvider = null
     }
+      */
     window.localStorage.removeItem(connectorLocalStorageKey)
   }, [connector, dispatch])
 

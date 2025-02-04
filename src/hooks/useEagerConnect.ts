@@ -22,6 +22,11 @@ const useEagerConnect = () => {
   useEffect(() => {
     const connectorId = window.localStorage.getItem(connectorLocalStorageKey) as ConnectorNames
 
+    if (connectorId === ConnectorNames.WalletConnect) {
+      window.localStorage.removeItem(connectorLocalStorageKey)
+      return
+    }
+
     if (connectorId) {
       const isConnectorBinanceChain = connectorId === ConnectorNames.BSC
       const isBinanceChainDefined = Reflect.has(window, 'BinanceChain')
