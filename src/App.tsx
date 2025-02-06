@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom' // HashRouter replace BrowserRouter
 import { ResetCSS } from '@pancakeswap/uikit'
 import BigNumber from 'bignumber.js'
 import useEagerConnect from 'hooks/useEagerConnect'
@@ -61,7 +61,7 @@ const App: React.FC = () => {
   usePollCoreFarmData()
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ResetCSS />
       <GlobalStyle />
       <GlobalCheckClaimStatus excludeLocations={['/collectibles']} />
@@ -132,7 +132,7 @@ const App: React.FC = () => {
       <EasterEgg iterations={2} />
       <ToastListener />
       <DatePickerPortal />
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

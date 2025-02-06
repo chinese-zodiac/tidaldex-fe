@@ -136,9 +136,9 @@ const Footer = () => {
             <Link className="pinterest" external href="https://sk.pinterest.com/tidaldex/">
               {t('')}
             </Link>
-            <Link className="tiktok" external href="https://www.tiktok.com/@tidaldex">
+            {/* <Link className="tiktok" external href="https://www.tiktok.com/@tidaldex">
               {t('')}
-            </Link>
+            </Link> */}
           </Wrapper>
         </Wrapper>
       </Wrapper>

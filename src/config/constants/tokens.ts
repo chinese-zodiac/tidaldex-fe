@@ -17,13 +17,7 @@ export const CAKE: { [chainId: number]: Token } = {
   ),
 }
 export const BUSD: { [chainId: number]: Token } = {
-  [ChainId.MAINNET]: new Token(
-    ChainId.MAINNET,
-    '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
-    18,
-    'BUSD',
-    'Binance USD',
-  ),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xe68b79e51bf826534ff37aa9cee71a3842ee9c70', 18, 'CZUSD', 'CZUSD'),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
     '0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee',
@@ -127,13 +121,13 @@ const tokens = {
   },
 
   busd: {
-    symbol: 'BUSD',
+    symbol: 'CZUSD',
     address: {
-      56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+      56: '0xe68b79e51bf826534ff37aa9cee71a3842ee9c70',
       97: '',
     },
     decimals: 18,
-    projectLink: 'https://www.paxos.com/busd/',
+    projectLink: 'https://czodiac.com/',
   },
 
   syrup: {

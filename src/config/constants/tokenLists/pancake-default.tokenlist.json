@@ -180,6 +180,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://demo7.velvosoft.com/images/tokens/0xd963b2236d227a0302e19f2f9595f424950dc186.png"
+    },
+	{
+      "name": "CZUSD",
+      "symbol": "CZUSD",
+      "address": "0xe68b79e51bf826534ff37aa9cee71a3842ee9c70",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://demo7.velvosoft.com/images/tokens/0xe68b79e51bf826534ff37aa9cee71a3842ee9c70.png"
     }
 
 	

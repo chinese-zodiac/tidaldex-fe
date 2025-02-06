@@ -82,7 +82,7 @@ export const useLpTokenPrice = (symbol: string) => {
     // Total value of base token in LP
     const valueOfBaseTokenInFarm = farmTokenPriceInUsd.times(farm.tokenAmountTotal)
     // Double it to get overall value in LP
-    const overallValueOfAllTokensInFarm = valueOfBaseTokenInFarm.times(2)
+    const overallValueOfAllTokensInFarm = valueOfBaseTokenInFarm.times(1)
     // Divide total value of all tokens, by the number of LP tokens
     const totalLpTokens = getBalanceAmount(new BigNumber(farm.lpTotalSupply))
     lpTokenPrice = overallValueOfAllTokensInFarm.div(totalLpTokens)
@@ -94,12 +94,12 @@ export const useLpTokenPrice = (symbol: string) => {
 // /!\ Deprecated , use the BUSD hook in /hooks
 
 export const usePriceBnbBusd = (): BigNumber => {
-  const bnbBusdFarm = useFarmFromPid(2)
+  const bnbBusdFarm = useFarmFromPid(1)
   return new BigNumber(bnbBusdFarm.quoteToken.busdPrice)
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
-  const cakeBnbFarm = useFarmFromPid(1)
+  const cakeBnbFarm = useFarmFromPid(2)
 
   const cakePriceBusdAsString = cakeBnbFarm.token.busdPrice
 
