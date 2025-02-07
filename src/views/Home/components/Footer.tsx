@@ -113,29 +113,20 @@ const Footer = () => {
 
         <Wrapper className="div2">
           <Wrapper className="socialbox">
-            <Link className="telegram" external href="https://t.me/">
+            <Link className="web" external href="https://czodiac.com/">
               {t('')}
             </Link>
-            <Link className="twitter" external href="https://twitter.com/tidaldex">
+            <Link className="telegram" external href="https://t.me/CZodiacofficial">
               {t('')}
             </Link>
-            <Link className="facebook" external href="https://www.facebook.com/tidaldex">
-              {t('')}
-            </Link>
-            <Link className="linkedin" external href="https://www.linkedin.com/company/tidaldex/">
-              {t('')}
-            </Link>
-            <Link className="instagram" external href="https://www.instagram.com/tidaldex/">
+            <Link className="twitter" external href="https://twitter.com/zodiacs_c">
               {t('')}
             </Link>
 
-            <Link className="youtube" external href="https://www.youtube.com/@tidaldex">
+            <Link className="github" external href="https://github.com/chinese-zodiac">
               {t('')}
             </Link>
 
-            <Link className="pinterest" external href="https://sk.pinterest.com/tidaldex/">
-              {t('')}
-            </Link>
             {/* <Link className="tiktok" external href="https://www.tiktok.com/@tidaldex">
               {t('')}
             </Link> */}

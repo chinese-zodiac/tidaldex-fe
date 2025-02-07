@@ -6,6 +6,7 @@ import { PoolsState, Pool, CakeVault, VaultFees, VaultUser, AppThunk } from 'sta
 import { getPoolApr } from 'utils/apr'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { getAddress } from 'utils/addressHelpers'
+import { getMasterchefContract } from 'utils/contractHelpers'
 import { fetchPoolsBlockLimits, fetchPoolsStakingLimits, fetchPoolsTotalStaking } from './fetchPools'
 import {
   fetchPoolsAllowance,
@@ -49,6 +50,8 @@ export const fetchPoolsPublicDataAsync = (currentBlock: number) => async (dispat
 
   const prices = getTokenPricesFromFarm(getState().farms.data)
 
+  const baseAprBasis = (await getMasterchefContract().baseAprBasis()).div(100)
+
   const liveData = poolsConfig.map((pool) => {
     const blockLimit = blockLimits.find((entry) => entry.sousId === pool.sousId)
     const totalStaking = totalStakings.find((entry) => entry.sousId === pool.sousId)
@@ -58,16 +61,23 @@ export const fetchPoolsPublicDataAsync = (currentBlock: number) => async (dispat
     const stakingTokenAddress = pool.stakingToken.address ? getAddress(pool.stakingToken.address).toLowerCase() : null
     const stakingTokenPrice = stakingTokenAddress ? prices[stakingTokenAddress] : 0
 
+    const tokenPerSecond = pool.sousId === 0 ? '0.1' : pool.tokenPerSecond
+
     const earningTokenAddress = pool.earningToken.address ? getAddress(pool.earningToken.address).toLowerCase() : null
     const earningTokenPrice = earningTokenAddress ? prices[earningTokenAddress] : 0
-    const apr = !isPoolFinished
-      ? getPoolApr(
-          stakingTokenPrice,
-          earningTokenPrice,
-          getBalanceNumber(new BigNumber(totalStaking.totalStaked), pool.stakingToken.decimals),
-          parseFloat(pool.tokenPerBlock),
-        )
-      : 0
+
+    const apr =
+      pool.sousId === 0
+        ? baseAprBasis
+        : !isPoolFinished
+        ? getPoolApr(
+            pool.sousId,
+            stakingTokenPrice,
+            earningTokenPrice,
+            getBalanceNumber(new BigNumber(totalStaking.totalStaked), pool.stakingToken.decimals),
+            tokenPerSecond,
+          )
+        : 0
 
     return {
       ...blockLimit,

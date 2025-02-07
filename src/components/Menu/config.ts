@@ -58,7 +58,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
       {
         label: t('Docs'),
         icon: 'InfoIcon',
-        href: 'https://docs.tidaldex.com/',
+        href: 'https://docs.czodiac.com',
       },
     ],
   },

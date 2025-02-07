@@ -1,6 +1,5 @@
 import BigNumber from 'bignumber.js'
-import { BLOCKS_PER_YEAR, CAKE_PER_YEAR } from 'config'
-import lpAprs from 'config/constants/lpAprs.json'
+import { SECONDS_PER_YEAR } from 'config'
 
 /**
  * Get the APR value in %
@@ -11,14 +10,16 @@ import lpAprs from 'config/constants/lpAprs.json'
  * @returns Null if the APR is NaN or infinite.
  */
 export const getPoolApr = (
+  pid: number,
   stakingTokenPrice: number,
   rewardTokenPrice: number,
   totalStaked: number,
-  tokenPerBlock: number,
+  tokenPerSecond: string,
 ): number => {
-  const totalRewardPricePerYear = new BigNumber(rewardTokenPrice).times(tokenPerBlock).times(BLOCKS_PER_YEAR)
+  const totalRewardPricePerYear = new BigNumber(rewardTokenPrice).times(tokenPerSecond).times(SECONDS_PER_YEAR) // TODO: Fix pool apr
   const totalStakingTokenInPool = new BigNumber(stakingTokenPrice).times(totalStaked)
   const apr = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
+
   return apr.isNaN() || !apr.isFinite() ? null : apr.toNumber()
 }
 
@@ -31,18 +32,16 @@ export const getPoolApr = (
  *  maniapr apr (100) replace (12610300)
  */
 export const getFarmApr = (
-  poolWeight: BigNumber,
+  ytknPerSecond: BigNumber,
   cakePriceUsd: BigNumber,
   poolLiquidityUsd: BigNumber,
-  farmAddress: string,
 ): { cakeRewardsApr: number; lpRewardsApr: number } => {
-  const yearlyCakeRewardAllocation = CAKE_PER_YEAR.times(poolWeight)
-  const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd).times(1000)
+  const ytknRewardsApr = ytknPerSecond.times(SECONDS_PER_YEAR).times(cakePriceUsd).div(poolLiquidityUsd).times(100)
   let cakeRewardsAprAsNumber = null
-  if (!cakeRewardsApr.isNaN() && cakeRewardsApr.isFinite()) {
-    cakeRewardsAprAsNumber = cakeRewardsApr.toNumber()
+  if (!ytknRewardsApr.isNaN() && ytknRewardsApr.isFinite()) {
+    cakeRewardsAprAsNumber = ytknRewardsApr.toNumber()
   }
-  const lpRewardsApr = lpAprs[farmAddress?.toLocaleLowerCase()] ?? 0
+  const lpRewardsApr = 0 // 0 fee dex
   return { cakeRewardsApr: cakeRewardsAprAsNumber, lpRewardsApr }
 }
 

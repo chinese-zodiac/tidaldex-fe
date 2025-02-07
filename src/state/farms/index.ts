@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import farmsConfig from 'config/constants/farms'
 import isArchivedPid from 'utils/farmHelpers'
 import priceHelperLpsConfig from 'config/constants/priceHelperLps'
+import BigNumber from 'bignumber.js'
 import fetchFarms from './fetchFarms'
 import fetchFarmsPrices from './fetchFarmsPrices'
 import {
@@ -10,6 +11,8 @@ import {
   fetchFarmUserTokenBalances,
   fetchFarmUserStakedBalances,
 } from './fetchFarmUser'
+import { fetchYtknPerSecond } from './fetchYtknPerSecond'
+import { fetchTotalAlloc } from './fetchTotalAlloc'
 import { FarmsState, Farm } from '../types'
 
 const noAccountFarmConfig = farmsConfig.map((farm) => ({
@@ -30,6 +33,8 @@ export const nonArchivedFarms = farmsConfig.filter(({ pid }) => !isArchivedPid(p
 export const fetchFarmsPublicDataAsync = createAsyncThunk<Farm[], number[]>(
   'farms/fetchFarmsPublicDataAsync',
   async (pids) => {
+    const chefYtknPerSecond = await fetchYtknPerSecond()
+    const totalAlloc = await fetchTotalAlloc()
     const farmsToFetch = farmsConfig.filter((farmConfig) => pids.includes(farmConfig.pid))
 
     // Add price helper farms
@@ -42,8 +47,11 @@ export const fetchFarmsPublicDataAsync = createAsyncThunk<Farm[], number[]>(
     const farmsWithoutHelperLps = farmsWithPrices.filter((farm: Farm) => {
       return farm.pid || farm.pid === 0
     })
-
-    return farmsWithoutHelperLps
+    const farmsWithYtknPerSecond = farmsWithoutHelperLps.map((farm: Farm) => {
+      const ytknPerSecond = new BigNumber(farm.poolWeight).multipliedBy(chefYtknPerSecond)
+      return { ...farm, ytknPerSecond }
+    })
+    return farmsWithYtknPerSecond
   },
 )
 

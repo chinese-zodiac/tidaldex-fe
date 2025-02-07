@@ -38,7 +38,7 @@ const farms: FarmConfig[] = [
     quoteToken: tokens.wbnb,
   },
 
-  /* {
+  {
     pid: 3,
     lpSymbol: 'CZUSD-BNB LP',
     lpAddresses: {
@@ -47,7 +47,7 @@ const farms: FarmConfig[] = [
     },
     token: tokens.busd,
     quoteToken: tokens.wbnb,
-  }, */
+  },
 ]
 
 export default farms

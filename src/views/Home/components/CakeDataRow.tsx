@@ -6,6 +6,7 @@ import { getBalanceNumber, formatLocalisedCompactNumber, formatNumber } from 'ut
 import { usePriceCakeBusd } from 'state/farms/hooks'
 import { Flex, Text, Heading, Image, Skeleton } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
+import { parseEther } from 'ethers/lib/utils'
 
 import Balance from 'components/Balance'
 
@@ -57,12 +58,12 @@ const CakeDataRow = () => {
 
   // ************* tsuply price mcap burned   ****************
   const totalSupply = useTotalSupply()
-  const burnedBalance = getBalanceNumber(useBurnedBalance(getCakeAddress()))
-  const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - burnedBalance : 0
+  const burnedBalance = totalSupply ? 1000000000 - getBalanceNumber(totalSupply) : 0
+  const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) : 0
   const CirculationBalance = cakeSupply
   const cakePriceBusd = usePriceCakeBusd()
   const mcap = cakePriceBusd.times(cakeSupply)
-  const maxSupply = 20000000000
+
   const mcapString = formatNumber(mcap.toNumber())
 
   // ************* tsuply ****************
@@ -73,10 +74,10 @@ const CakeDataRow = () => {
         <Flex flexDirection="column">
           <StyledImage className="iconimage" src="/images/home/icon1.png" alt="" width={64} height={64} /> {t('')}
           <Text color="#000" marginBottom={1}>
-            {t('Total supply')}
+            {t('Max supply')}
           </Text>
           {cakeSupply ? (
-            <Balance decimals={0} lineHeight="1.1" color="#0097e1" fontSize="24px" bold value={cakeSupply} />
+            <Balance decimals={0} lineHeight="1.1" color="#0097e1" fontSize="24px" bold value={1000000000} />
           ) : (
             <Skeleton height={24} width={126} my="4px" />
           )}
@@ -102,7 +103,7 @@ const CakeDataRow = () => {
         <StyledImage className="iconimage" src="/images/home/icon3.png" alt="AmpleSwap" width={64} height={64} />{' '}
         {t('')}
         <Text color="#000">{t('Total Burned')}</Text>
-        {mcap?.gt(0) && burnedBalance ? (
+        {burnedBalance ? (
           <Heading scale="lg">
             <Balance color="#0097e1" fontSize="24px" bold decimals={0} value={burnedBalance} />
           </Heading>

@@ -31,6 +31,7 @@ export interface Farm extends FarmConfig {
   lpTotalSupply?: SerializedBigNumber
   tokenPriceVsQuote?: SerializedBigNumber
   poolWeight?: SerializedBigNumber
+  ytknPerSecond?: number
   userData?: {
     allowance: string
     tokenBalance: string
