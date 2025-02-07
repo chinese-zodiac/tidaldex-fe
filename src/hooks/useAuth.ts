@@ -21,7 +21,6 @@ const useAuth = () => {
   const login = useCallback(
     async (connectorID: ConnectorNames) => {
       const selectedConnector = connectorsByName[connectorID]
-      console.log(selectedConnector)
       if (selectedConnector) {
         try {
           if (connectorID === ConnectorNames.WalletConnect) {
@@ -33,8 +32,6 @@ const useAuth = () => {
             await selectedConnector.activate(parseInt(process.env.REACT_APP_CHAIN_ID, 10))
           }
         } catch (error) {
-          console.log('Inside activate error')
-          console.log(error)
           if (error.name === 'UnsupportedChainIdError') {
             const hasSetup = await setupNetwork()
             if (hasSetup) {
@@ -52,7 +49,6 @@ const useAuth = () => {
           }
         }
       } else {
-        console.log('else')
         toastError(t('Unable to find connector'), t('The connector config is wrong'))
       }
     },

@@ -3,6 +3,7 @@ import poolsConfig from 'config/constants/pools'
 import sousChefABI from 'config/abi/sousChef.json'
 import cakeABI from 'config/abi/cake.json'
 import wbnbABI from 'config/abi/weth.json'
+import masterchefABI from 'config/abi/masterchef.json'
 import multicall from 'utils/multicall'
 import { getAddress, getWbnbAddress } from 'utils/addressHelpers'
 import { BIG_ZERO } from 'utils/bigNumber'
@@ -38,8 +39,9 @@ export const fetchPoolsBlockLimits = async () => {
 }
 
 export const fetchPoolsTotalStaking = async () => {
-  const nonBnbPools = poolsConfig.filter((p) => p.stakingToken.symbol !== 'BNB')
-  const bnbPool = poolsConfig.filter((p) => p.stakingToken.symbol === 'BNB')
+  const nonBnbPools = poolsConfig.filter((p) => p.stakingToken.symbol !== 'BNB' && p.sousId !== 0)
+  const bnbPool = poolsConfig.filter((p) => p.stakingToken.symbol === 'BNB' && p.sousId !== 0)
+  const basePool = poolsConfig.filter((p) => p.sousId === 0)
 
   const callsNonBnbPools = nonBnbPools.map((poolConfig) => {
     return {
@@ -56,10 +58,16 @@ export const fetchPoolsTotalStaking = async () => {
       params: [getAddress(poolConfig.contractAddress)],
     }
   })
-
+  const callsBasePools = basePool.map((poolConfig) => {
+    return {
+      address: poolConfig.contractAddress[parseInt(process.env.REACT_APP_CHAIN_ID, 10)],
+      name: 'poolInfo',
+      params: [poolConfig.sousId],
+    }
+  })
   const nonBnbPoolsTotalStaked = await multicall(cakeABI, callsNonBnbPools)
   const bnbPoolsTotalStaked = await multicall(wbnbABI, callsBnbPools)
-
+  const basePoolsTotalStaked = await multicall(masterchefABI, callsBasePools)
   return [
     ...nonBnbPools.map((p, index) => ({
       sousId: p.sousId,
@@ -68,6 +76,10 @@ export const fetchPoolsTotalStaking = async () => {
     ...bnbPool.map((p, index) => ({
       sousId: p.sousId,
       totalStaked: new BigNumber(bnbPoolsTotalStaked[index]).toJSON(),
+    })),
+    ...basePool.map((p, index) => ({
+      sousId: p.sousId,
+      totalStaked: new BigNumber(basePoolsTotalStaked[index].totalDeposit).toJSON(),
     })),
   ]
 }
@@ -87,6 +99,7 @@ export const fetchPoolsStakingLimits = async (
 ): Promise<{ [key: string]: BigNumber }> => {
   const validPools = poolsConfig
     .filter((p) => p.stakingToken.symbol !== 'BNB' && !p.isFinished)
+    .filter((p) => p.sousId !== 0)
     .filter((p) => !poolsWithStakingLimit.includes(p.sousId))
 
   // Get the staking limit for each valid pool
