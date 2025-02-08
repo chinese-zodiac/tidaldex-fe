@@ -54,30 +54,32 @@ const FloatingPancakesWrapper = styled(Container)`
 const TopLeftImgWrapper = styled(Flex)`
   position: absolute;
   left: 0;
-  top: 0;
+  top: 5px;
+  max-width: 100px;
 `
 
 const BottomRightImgWrapper = styled(Flex)`
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 15px;
+  max-width: 100px;
 `
 
 const topLeftImage = {
-  path: '/images/home/flying-pancakes/',
+  path: '/images/flying-waves/',
   attributes: [
-    { src: '1-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '1-left', alt: 'Pancake flying on the left' },
-    { src: '1-top', alt: 'Pancake flying on the top' },
+    { src: 'waves-green', alt: 'Wave flying on the bottom' },
+    { src: 'waves-cyan', alt: 'Wave flying on the top' },
+    { src: 'waves-blue', alt: 'Wave flying on the right' },
   ],
 }
 
 const bottomRightImage = {
-  path: '/images/home/flying-pancakes/',
+  path: '/images/flying-waves/',
   attributes: [
-    { src: '2-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '2-top', alt: 'Pancake flying on the top' },
-    { src: '2-right', alt: 'Pancake flying on the right' },
+    { src: 'waves-green', alt: 'Wave flying on the bottom' },
+    { src: 'waves-cyan', alt: 'Wave flying on the top' },
+    { src: 'waves-blue', alt: 'Wave flying on the right' },
   ],
 }
 
@@ -92,7 +94,7 @@ const Footer = () => {
           <StyledSunburst />
         </Flex>
       </BgWrapper>
-      <FloatingPancakesWrapper>
+      <FloatingPancakesWrapper className="floating-pancakes-wrapper">
         <TopLeftImgWrapper>
           <CompositeImage {...topLeftImage} maxHeight="256px" />
         </TopLeftImgWrapper>

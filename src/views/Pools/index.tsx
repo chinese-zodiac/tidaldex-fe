@@ -242,7 +242,7 @@ const Pools: React.FC = () => {
         <Flex className="poolbanner" justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
           <Flex flex="1" flexDirection="column" mr={['8px', 0]}>
             <Heading as="h1" scale="xl" color="secondary" mb="24px">
-              {t('Syrup Pools')}
+              {t('Pools')}
             </Heading>
             <Heading scale="lg" color="text">
               {t('Just stake some tokens to earn. High APR, low risk.')}
