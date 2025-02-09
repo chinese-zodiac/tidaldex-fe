@@ -12,7 +12,7 @@ const farms: FarmConfig[] = [
       97: '0xD963b2236D227a0302E19F2f9595F424950dc186',
       56: '0xD963b2236D227a0302E19F2f9595F424950dc186',
     },
-    token: tokens.syrup,
+    token: tokens.czb,
     quoteToken: tokens.wbnb,
   },
 

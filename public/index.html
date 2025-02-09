@@ -584,6 +584,27 @@
 			}
 	/*--=========== Local System CSS ==============--*/
 
+	/* background image overrides */
+	@keyframes animatedBackground {
+		0% { background-position: 0 0; }
+		30% { background-position: 512px -128px; }
+		35% { background-position: 475px -100px; }
+		50% { background-position: 1200px -200px; }
+		90% { background-position: 1000px -175px; }
+		100% { background-position: 2048px -512px ; }
+
+	}
+	.sc-iGgWBj.sc-gsFSXq.sc-hqpNSm, .sc-hHOBiw.gHCRdA, .sc-hHOBiw.bxhtVa, .sc-bXWnss.bOTTxS{
+		background-image: url('images/backgrounds/bg-tile-light.png');
+		animation: animatedBackground 45s ease-in-out infinite;
+	}
+
+	.sc-iGgWBj.sc-gsFSXq.sc-hqpNSm.jFahgW, .sc-hHOBiw.gHCRdA:has(> .hmwXma), .sc-hHOBiw.bxhtVa:has(> .hmwXma), .sc-bXWnss.jQMglU {
+		background-image: url('images/backgrounds/bg-tile-dark.png');
+		animation: animatedBackground 45s ease-in-out infinite;
+	}
+
+
 		/* menu images */
 	.sc-aXZVg.bTHQpS image{
 		width:32px !important;
@@ -803,7 +824,7 @@
 .gIqPTF{background: linear-gradient(rgb(0 67 137) 0%, rgb(0 21 64) 100%) !important;}
 .cqglhx{background: linear-gradient(rgb(0 67 137) 0%, rgb(0 21 64) 100%) !important;}
 .gBDiGg{background: linear-gradient(rgb(0 67 137) 0%, rgb(0 21 64) 100%) !important;}
-.bOTTxS{background: linear-gradient(139.73deg, #d4e5f3 0%, rgb(232 225 251) 100%) !important;        padding-top: 70px !important;}	
+.bOTTxS{padding-top: 70px !important;}	
 .cyfBTY span{ color:#fff !important;}
 .hplsoI span{ color:#fff !important;}
 .cqONZj{color:#fff !important;}
