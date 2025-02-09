@@ -86,7 +86,6 @@ const tokens = {
     symbol: 'wBNB',
     address: {
       56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
-      97: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
     },
     decimals: 18,
     projectLink: 'https://pancakeswap.finance/',
@@ -96,7 +95,6 @@ const tokens = {
     symbol: 'CZUSD',
     address: {
       56: '0xe68b79e51bf826534ff37aa9cee71a3842ee9c70',
-      97: '',
     },
     decimals: 18,
     projectLink: 'https://czodiac.com/',
@@ -106,7 +104,6 @@ const tokens = {
     symbol: 'USDT',
     address: {
       56: '0x55d398326f99059fF775485246999027B3197955',
-      97: '0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5',
     },
     decimals: 18,
     projectLink: 'https://tether.to/',
