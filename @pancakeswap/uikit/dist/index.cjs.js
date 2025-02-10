@@ -263,6 +263,7 @@ var Button = function (props) {
     if (isDisabled && !isLoading) {
         classNames.push("pancake-button--disabled");
     }
+    classNames.push("pcs-styled-button")
     return (React__default['default'].createElement(StyledButton, __assign({ "$isLoading": isLoading, className: classNames.join(" "), disabled: isDisabled }, internalProps, rest),
         React__default['default'].createElement(React__default['default'].Fragment, null,
             React.isValidElement(startIcon) &&
@@ -815,8 +816,8 @@ var Icon$1b = function (props) {
 };
 
 var Icon$1a = function (props) {
-    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 32 32" }, props),
-        React__default['default'].createElement("image", { href: '/images/swapimg/round.png' })));
+    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 32 32" }),
+        React__default['default'].createElement("image", { href: '/images/swapimg/round.png'})));
 };
 
 var Icon$19 = function (props) {
@@ -1945,7 +1946,7 @@ var StyledLink$1 = styled__default['default'](Text)(templateObject_1$E || (templ
 var Link = function (_a) {
     var external = _a.external, props = __rest(_a, ["external"]);
     var internalProps = external ? getExternalLinkProps() : {};
-    return React__default['default'].createElement(StyledLink$1, __assign({ as: "a", bold: true }, internalProps, props));
+    return React__default['default'].createElement(StyledLink$1, __assign({ as: "a", bold: true, className: "styled-link-1" }, internalProps, props));
 };
 Link.defaultProps = {
     color: "primary",
@@ -3312,31 +3313,67 @@ var useKonamiCheatCode = function (matchedCodeHandler) {
 };
 
 var baseColors = {
-    failure: "#ED4B9E",
-    primary: "#1FC7D4",
-    primaryBright: "#53DEE9",
+    failure: "#FB390F",
+    primary: "#0FD1FB",
+    primaryBright: "#AF0FFB",
     primaryDark: "#0098A1",
-    secondary: "#7645D9",
-    success: "#31D0AA",
-    warning: "#FFB237",
+    secondary: "#5BFB0F",
+    success: "#22dd91",
+    warning: "##DD9122",
+
 };
 var additionalColors = {
-    binance: "#F0B90B",
-    overlay: "#452a7a",
-    gold: "#FFC700",
-    silver: "#B2B2B2",
-    bronze: "#E7974D",
+    binance: "#F0B90B", // yellow
+    overlay: "#00248f", // dark purple
+    gold: "#FFC700", // gold
+    silver: "#B2B2B2", // gray
+    bronze: "#E7974D", // bronze
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { background: "#FAF9FA", backgroundDisabled: "#E9EAEB", backgroundAlt: "#FFFFFF", cardBorder: "#E7E3EB", contrast: "#191326", dropdown: "#F6F6F6", dropdownDeep: "#EEEEEE", invertedContrast: "#FFFFFF", input: "#eeeaf4", inputSecondary: "#d7caec", tertiary: "#EFF4F5", text: "#280D5F", textDisabled: "#BDC2C4", textSubtle: "#7A6EAA", disabled: "#E9EAEB", gradients: {
-        bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
-        inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
-        cardHeader: "linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)",
+
+var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { 
+    background: "#EBF8FC", // Light cyan background
+    backgroundDisabled: "#E0EEF2", // Slightly darker cyan for disabled state
+    backgroundAlt: "#FFFFFF", // Keep white for contrast
+    cardBorder: "#B8E8F2", // Light cyan border
+    contrast: "#0A4B5B", // Dark cyan for high contrast
+    dropdown: "#E5F6FA", // Very light cyan for dropdowns
+    dropdownDeep: "#D9F0F5", // Slightly darker cyan for nested dropdowns
+    invertedContrast: "#FFFFFF", // Keep white
+    input: "#E0F3F7", // Light cyan for inputs
+    inputSecondary: "#B8E8F2", // Medium cyan for secondary inputs
+    tertiary: "#F0FAFC", // Very light cyan for tertiary elements
+    text: "#0A4B5B", // Dark cyan for text
+    textDisabled: "#92C5D1", // Medium cyan for disabled text
+    textSubtle: "#4A8B9A", // Medium-dark cyan for subtle text
+    disabled: "#E0EEF2", // Light cyan for disabled elements
+    gradients: {
+        bubblegum: "linear-gradient(139.73deg,rgb(229, 255, 248) 0%,rgb(240, 239, 255) 100%)",
+        inverseBubblegum: "linear-gradient(139.73deg,rgb(239, 248, 255) 0%, #E5FDFF 100%)",
+        cardHeader: "linear-gradient(111.68deg,rgb(236, 242, 240) 0%,rgb(232, 236, 246) 100%)",
         blue: "linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)",
         violet: "linear-gradient(180deg, #E2C9FB 0%, #CDB8FA 100%)",
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#08060B", backgroundDisabled: "#3c3742", backgroundAlt: "#27262c", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#353547", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#B8ADD2", disabled: "#524B63", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { 
+    secondary: "#0FD1FB", // Bright cyan for secondary elements
+    background: "#051B2C", // Very dark blue-cyan
+    backgroundDisabled: "#0A2A3D", // Slightly lighter dark blue
+    backgroundAlt: "#072435", // Dark blue-cyan alternative
+    cardBorder: "#0C3B54", // Medium-dark cyan border
+    contrast: "#FFFFFF", // Keep white for contrast
+    dropdown: "#062331", // Dark blue-cyan for dropdowns
+    dropdownDeep: "#041824", // Deeper dark blue for nested dropdowns
+    invertedContrast: "#051B2C", // Very dark blue-cyan
+    input: "#0A2A3D", // Dark blue input background
+    inputSecondary: "#072435", // Slightly lighter input background
+    primaryDark: "#0098A1", // Keep existing cyan
+    tertiary: "#0C3B54", // Medium-dark cyan
+    text: "#E5F6FA", // Very light cyan for text
+    textDisabled: "#3A6F85", // Muted cyan for disabled text
+    textSubtle: "#7CB0C7", // Light cyan for subtle text
+    disabled: "#0A2A3D", // Dark blue for disabled elements
+    gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
         cardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
@@ -4250,9 +4287,9 @@ var templateObject_1$d;
 var PriceLink = styled__default['default'].a(templateObject_1$c || (templateObject_1$c = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var CakePrice = function (_a) {
     var cakePriceUsd = _a.cakePriceUsd;
-    return cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://bscscan.com/token/0xd963b2236d227a0302e19f2f9595f424950dc186", target: "_blank" }, // adtoken mani
-        React__default['default'].createElement(Icon$1a, { width: "24px", mr: "8px" }),
-        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(8)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
+    return cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://bscscan.com/token/0xd963b2236d227a0302e19f2f9595f424950dc186", target: "_blank", className: "cake-price-usd"  }, // adtoken mani
+        React__default['default'].createElement(Icon$1a, { width: "24px", mr: "8px",className: "header-round-logo" }),
+        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(4)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var CakePrice$1 = React__default['default'].memo(CakePrice);
 var templateObject_1$c;

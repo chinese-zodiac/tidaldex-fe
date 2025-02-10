@@ -17,6 +17,7 @@ const Menu = (props) => {
 
   return (
     <UikitMenu
+      className="UikitMenu-container"
       userMenu={<UserMenu />}
       globalMenu={<GlobalSettings />}
       isDark={isDark}
