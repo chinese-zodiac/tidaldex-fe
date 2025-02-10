@@ -13,8 +13,9 @@ const StyledPage = styled.div`
   padding-bottom: 0;
   min-height: calc(100vh - 64px);
   background: ${({ theme }) => theme.colors.gradients.bubblegum};
-  background-image: ${({ theme }) => theme.isDark ? "url('images/backgrounds/bg-tile-dark.png')" : "url('images/backgrounds/bg-tile-light.png')"};
-	animation: animatedBackground 45s ease-in-out infinite;
+  background-image: ${({ theme }) =>
+    theme.isDark ? "url('images/backgrounds/bg-tile-dark.png')" : "url('images/backgrounds/bg-tile-light.png')"};
+  animation: animatedBackground 45s ease-in-out infinite;
 
   ${({ theme }) => theme.mediaQueries.xs} {
     background-size: auto;

@@ -3299,21 +3299,21 @@ var useKonamiCheatCode = function (matchedCodeHandler) {
 };
 
 var baseColors = {
-    failure: "#FB390F",
-    primary: "#0FD1FB",
-    primaryBright: "#AF0FFB",
-    primaryDark: "#0098A1",
-    secondary: "#5BFB0F",
-    success: "#22dd91",
-    warning: "##DD9122",
-
+    failure: "#FF4D6A", // Bright red-pink for errors
+    primary: "#0FD1FB", // Bright cyan - main brand color
+    primaryBright: "#47E3FF", // Lighter cyan for highlights
+    primaryDark: "#0098A1", // Darker cyan for depth
+    secondary: "#1CA7D4", // Medium blue-cyan
+    success: "#22DDC9", // Cyan-tinted green for success
+    warning: "#FFB23F", // Warm orange for warnings
 };
+
 var additionalColors = {
-    binance: "#F0B90B",
-    overlay: "#00248f",
-    gold: "#FFC700", 
-    silver: "#B2B2B2",
-    bronze: "#E7974D",
+    binance: "#F0B90B", // Keep yellow for Binance
+    overlay: "#0A4B5B", // Dark cyan for overlays
+    gold: "#FFD700", // Keep gold
+    silver: "#B8E8F2", // Cyan-tinted silver
+    bronze: "#E7974D", // Keep bronze
 };
 
 var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { 
@@ -3333,13 +3333,13 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
     textSubtle: "#4A8B9A", // Medium-dark cyan for subtle text
     disabled: "#E0EEF2", // Light cyan for disabled elements
     gradients: {
-        bubblegum: "linear-gradient(139.73deg,rgb(229, 255, 248) 0%,rgb(240, 239, 255) 100%)",
-        inverseBubblegum: "linear-gradient(139.73deg,rgb(239, 248, 255) 0%, #E5FDFF 100%)",
-        cardHeader: "linear-gradient(111.68deg,rgb(236, 242, 240) 0%,rgb(232, 236, 246) 100%)",
-        blue: "linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)",
-        violet: "linear-gradient(180deg, #E2C9FB 0%, #CDB8FA 100%)",
-        violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
-        gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
+        bubblegum: "linear-gradient(139.73deg, #E5F8FF 0%, #D0F3FF 100%)", // Light cyan gradient
+        inverseBubblegum: "linear-gradient(139.73deg, #D0F3FF 0%, #E5F8FF 100%)", // Inverse light cyan
+        cardHeader: "linear-gradient(111.68deg, #F0FAFF 0%, #E5F8FF 100%)", // Subtle cyan header
+        blue: "linear-gradient(180deg, #0FD1FB 0%, #0098A1 100%)", // Primary cyan gradient
+        violet: "linear-gradient(180deg, #B8E8F2 0%, #8CD9E6 100%)", // Secondary cyan
+        violetAlt: "linear-gradient(180deg, #E0F3F7 0%, #B8E8F2 100%)", // Alternative cyan
+        gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)", // Keep gold for alerts/warnings
     } });
 var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { 
     secondary: "#0FD1FB", // Bright cyan for secondary elements
@@ -3360,13 +3360,13 @@ var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), 
     textSubtle: "#7CB0C7", // Light cyan for subtle text
     disabled: "#0A2A3D", // Dark blue for disabled elements
     gradients: {
-        bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
-        inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
-        cardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
-        blue: "linear-gradient(180deg, #00707F 0%, #19778C 100%)",
-        violet: "linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%)",
-        violetAlt: "linear-gradient(180deg, #434575 0%, #66578D 100%)",
-        gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
+        bubblegum: "linear-gradient(139.73deg, #0A2E44 0%, #051B2C 100%)", // Deep ocean gradient
+        inverseBubblegum: "linear-gradient(139.73deg, #051B2C 0%, #0A2E44 100%)", // Inverse deep ocean
+        cardHeader: "linear-gradient(166.77deg, #0C3B54 0%, #072435 100%)", // Dark cyan header
+        blue: "linear-gradient(180deg, #0FD1FB 0%, #0098A1 100%)", // Bright cyan gradient
+        violet: "linear-gradient(180deg, #0A4B5B 0%, #083744 100%)", // Deep cyan
+        violetAlt: "linear-gradient(180deg, #0C3B54 0%, #062331 100%)", // Alternative deep cyan
+        gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)", // Keep gold for alerts/warnings
     } });
 
 var light$7 = {
