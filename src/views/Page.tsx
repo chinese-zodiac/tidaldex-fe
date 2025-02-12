@@ -17,10 +17,6 @@ const StyledPage = styled.div`
     theme.isDark ? "url('images/backgrounds/bg-tile-dark.png')" : "url('images/backgrounds/bg-tile-light.png')"};
   animation: animatedBackground 45s ease-in-out infinite;
 
-  ${({ theme }) => theme.mediaQueries.xs} {
-    background-size: auto;
-  }
-
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 24px;
     padding-bottom: 0;
