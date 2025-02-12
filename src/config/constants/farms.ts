@@ -162,6 +162,69 @@ const farms: FarmConfig[] = [
     token: tokens.lrt,
     quoteToken: tokens.czb,
   },
+  {
+    pid: 17,
+    lpSymbol: 'SFUND-CZB LP',
+    lpAddresses: {
+      56: '0x78632163EB85B2eAd89438c463E514D46948681e',
+    },
+    token: tokens.sfund,
+    quoteToken: tokens.czb,
+  },
+  {
+    pid: 18,
+    lpSymbol: 'SHIB-CZB LP',
+    lpAddresses: {
+      56: '0x8b278022e8A1bFB97a6Ae61D8e6328c3E70d9e03',
+    },
+    token: tokens.shib,
+    quoteToken: tokens.czb,
+  },
+  {
+    pid: 19,
+    lpSymbol: 'BCH-CZB LP',
+    lpAddresses: {
+      56: '0x03b2AbAe298178400a393ad044749353CAbcc94e',
+    },
+    token: tokens.bch,
+    quoteToken: tokens.czb,
+  },
+  {
+    pid: 20,
+    lpSymbol: 'ETC-CZB LP',
+    lpAddresses: {
+      56: '0xf15755c0B9dA4af0918CdD493446556edaB7f676',
+    },
+    token: tokens.etc,
+    quoteToken: tokens.czb,
+  },
+  {
+    pid: 21,
+    lpSymbol: 'ALU-CZB LP',
+    lpAddresses: {
+      56: '0x21659d7E4406dEbF1e072003233A0282228cb807',
+    },
+    token: tokens.alu,
+    quoteToken: tokens.czb,
+  },
+  {
+    pid: 22,
+    lpSymbol: 'GEM-CZB LP',
+    lpAddresses: {
+      56: '0xf95AbAef547A6999f6D87380870493Cb7aB1A209',
+    },
+    token: tokens.gem,
+    quoteToken: tokens.czb,
+  },
+  {
+    pid: 23,
+    lpSymbol: 'CZR-CZB LP',
+    lpAddresses: {
+      56: '0x3D314a696D94d25AD7D28bEcF71f20b6199A7a92',
+    },
+    token: tokens.czr,
+    quoteToken: tokens.czb,
+  },
 ]
 
 export default farms
