@@ -11,6 +11,9 @@ import { getSouschefV2Contract } from 'utils/contractHelpers'
 
 export const fetchPoolsBlockLimits = async () => {
   const poolsWithEnd = poolsConfig.filter((p) => p.sousId !== 0)
+  if (poolsWithEnd.length === 0) {
+    return []
+  }
   const callsStartBlock = poolsWithEnd.map((poolConfig) => {
     return {
       address: getAddress(poolConfig.contractAddress),
@@ -68,8 +71,6 @@ export const fetchPoolsTotalStaking = async () => {
   const nonBnbPoolsTotalStaked = await multicall(cakeABI, callsNonBnbPools)
   const bnbPoolsTotalStaked = await multicall(wbnbABI, callsBnbPools)
   const basePoolsTotalStaked = await multicall(masterchefABI, callsBasePools)
-  console.log('basePoolsTotalStaked', basePoolsTotalStaked)
-  console.log('basePoolsTotalStaked', basePoolsTotalStaked[0].totalDeposit)
   return [
     ...nonBnbPools.map((p, index) => ({
       sousId: p.sousId,

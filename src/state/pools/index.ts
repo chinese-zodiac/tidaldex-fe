@@ -78,13 +78,12 @@ export const fetchPoolsPublicDataAsync = (currentBlock: number) => async (dispat
             tokenPerSecond,
           )
         : 0
-
     return {
       ...blockLimit,
       ...totalStaking,
       stakingTokenPrice,
       earningTokenPrice,
-      apr,
+      apr: apr.toNumber(),
       isFinished: isPoolFinished,
     }
   })

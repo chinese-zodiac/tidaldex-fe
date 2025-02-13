@@ -55,10 +55,10 @@
     {
       "name": "Ethereum",
       "symbol": "ETH",
-      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://tidaldex.com/images/tokens/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
+      "logoURI": "https://tidaldex.com/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
     },
     {
       "name": "Baby Doge",
@@ -79,10 +79,10 @@
     {
       "name": "Seedify.fund",
       "symbol": "SFUND",
-      "address": "0x477bc8d23c634c154061869478bce96be6045d12",
+      "address": "0x477bC8d23c634C154061869478bce96BE6045D12",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://tidaldex.com/images/tokens/0x477bc8d23c634c154061869478bce96be6045d12.png"
+      "logoURI": "https://tidaldex.com/images/tokens/0x477bC8d23c634C154061869478bce96BE6045D12.png"
     },
     {
       "name": "Pepe",
@@ -175,10 +175,10 @@
     {
       "name": "CatCoin",
       "symbol": "CAT",
-      "address": "0x59f4f336bf3d0c49dbfba4a74ebd2a6ace40539a",
+      "address": "0x59F4F336Bf3D0C49dBfbA4A74eBD2a6aCE40539A",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://tidaldex.com/images/tokens/0x59f4f336bf3d0c49dbfba4a74ebd2a6ace40539a.png"
+      "logoURI": "https://tidaldex.com/images/tokens/0x59F4F336Bf3D0C49dBfbA4A74eBD2a6aCE40539A.png"
     },
     {
       "name": "GreenMine",
