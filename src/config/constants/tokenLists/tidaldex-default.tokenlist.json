@@ -145,7 +145,7 @@
       "symbol": "NFT",
       "address": "0x1fC9004eC7E5722891f5f38baE7678efCB11d34D",
       "chainId": 56,
-      "decimals": 18,
+      "decimals": 6,
       "logoURI": "https://tidaldex.com/images/tokens/0x1fC9004eC7E5722891f5f38baE7678efCB11d34D.png"
     },
     {

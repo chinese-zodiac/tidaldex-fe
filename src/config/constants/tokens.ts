@@ -199,7 +199,7 @@ const tokens = {
     address: {
       56: '0x1fC9004eC7E5722891f5f38baE7678efCB11d34D',
     },
-    decimals: 18,
+    decimals: 6,
   },
   egld: {
     symbol: 'EGLD',
