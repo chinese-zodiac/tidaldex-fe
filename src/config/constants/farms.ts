@@ -46,6 +46,26 @@ const farms: FarmConfig[] = [
   },
 
   {
+    pid: 25,
+    lpSymbol: 'CZUSD-USDT LP',
+    lpAddresses: {
+      56: '0xA8F9054d78D173f9725A829e286c9a4662E2cCc8',
+    },
+    token: tokens.busd,
+    quoteToken: tokens.usdt,
+  },
+
+  {
+    pid: 24,
+    lpSymbol: 'CZB-USDT LP',
+    lpAddresses: {
+      56: '0x295b26C2B7ed6CE59E327b4ED0ce84945e5B6C4a',
+    },
+    token: tokens.usdt,
+    quoteToken: tokens.czb,
+  },
+
+  {
     pid: 4,
     lpSymbol: 'BTC-CZB LP',
     lpAddresses: {
