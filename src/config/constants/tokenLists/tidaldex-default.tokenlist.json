@@ -211,6 +211,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tidaldex.com/images/tokens/0x7c1608C004F20c3520f70b924E2BfeF092dA0043.png"
+    },
+    {
+      "name": "TerraClassicUSD",
+      "symbol": "USTC",
+      "address": "0x23396cF899Ca06c4472205fC903bDB4de249D6fC",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tidaldex.com/images/tokens/0x23396cF899Ca06c4472205fC903bDB4de249D6fC.png"
     }
   ]
 }

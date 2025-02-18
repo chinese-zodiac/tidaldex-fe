@@ -35,7 +35,7 @@ export const CZUSD = new Token(ChainId.MAINNET, '0xe68b79e51bf826534ff37aa9cee71
 
 export const UST = new Token(
   ChainId.MAINNET,
-  '0x23396cf899ca06c4472205fc903bdb4de249d6fc',
+  '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
   18,
   'UST',
   'Wrapped UST Token',
@@ -258,6 +258,13 @@ const tokens = {
     },
     decimals: 18,
     projectLink: 'https://czodiac.com/',
+  },
+  ustc: {
+    symbol: 'USTC',
+    address: {
+      56: '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
+    },
+    decimals: 18,
   },
 }
 
