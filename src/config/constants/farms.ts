@@ -74,7 +74,15 @@ const farms: FarmConfig[] = [
     token: tokens.ustc,
     quoteToken: tokens.czb,
   },
-
+  {
+    pid: 27,
+    lpSymbol: 'USTCwh-CZB LP',
+    lpAddresses: {
+      56: '0xeCbDfc9C78a00f572b11699D34869d67409B62a8',
+    },
+    token: tokens.ustcwh,
+    quoteToken: tokens.czb,
+  },
   {
     pid: 4,
     lpSymbol: 'BTC-CZB LP',

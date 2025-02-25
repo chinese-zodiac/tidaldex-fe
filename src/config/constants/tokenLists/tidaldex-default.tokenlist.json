@@ -219,6 +219,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tidaldex.com/images/tokens/0x23396cF899Ca06c4472205fC903bDB4de249D6fC.png"
+    },
+    {
+      "name": "USTC Wormhole",
+      "symbol": "USTC-wh",
+      "address": "0x3d4350cD54aeF9f9b2C29435e0fa809957B3F30a",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tidaldex.com/images/tokens/0x3d4350cD54aeF9f9b2C29435e0fa809957B3F30a.png"
     }
   ]
 }
