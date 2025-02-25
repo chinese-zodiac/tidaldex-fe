@@ -22,10 +22,10 @@ export default function CurrencyLogo({
   style?: React.CSSProperties
 }) {
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
-
+  console.log('uriLocations', uriLocations)
   const srcs: string[] = useMemo(() => {
     if (currency === ETHER) return []
-
+    console.log('currency', currency)
     if (currency instanceof Token) {
       if (currency instanceof WrappedTokenInfo) {
         return [...uriLocations, getTokenLogoURL(currency.address)]
