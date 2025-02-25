@@ -1,9 +1,9 @@
 {
   "name": "TidalDex Default List",
-  "timestamp": "2025-24-08T00:00:00Z",
+  "timestamp": "2025-24-12T00:00:00Z",
   "version": {
     "major": 3,
-    "minor": 2,
+    "minor": 3,
     "patch": 0
   },
   "tags": {},
