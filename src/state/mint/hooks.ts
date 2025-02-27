@@ -105,6 +105,11 @@ export function useDerivedMintInfo(
       const wrappedIndependentAmount = wrappedCurrencyAmount(independentAmount, chainId)
       const [tokenA, tokenB] = [wrappedCurrency(currencyA, chainId), wrappedCurrency(currencyB, chainId)]
       if (tokenA && tokenB && wrappedIndependentAmount && pair) {
+        // Check if the pair has non-zero reserves to prevent division by zero
+        if (JSBI.equal(pair.reserve0.raw, JSBI.BigInt(0)) || JSBI.equal(pair.reserve1.raw, JSBI.BigInt(0))) {
+          return undefined
+        }
+
         const dependentCurrency = dependentField === Field.CURRENCY_B ? currencyB : currencyA
         const dependentTokenAmount =
           dependentField === Field.CURRENCY_B
