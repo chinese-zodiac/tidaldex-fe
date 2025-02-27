@@ -1,8 +1,8 @@
 {
   "name": "TidalDex Default List",
-  "timestamp": "2025-24-12T00:00:00Z",
+  "timestamp": "2025-26-101T00:00:00Z",
   "version": {
-    "major": 4,
+    "major": 5,
     "minor": 3,
     "patch": 0
   },
@@ -227,6 +227,14 @@
       "chainId": 56,
       "decimals": 6,
       "logoURI": "https://tidaldex.com/images/tokens/0x3d4350cD54aeF9f9b2C29435e0fa809957B3F30a.png"
+    },
+    {
+      "name": "CeramicLiberty.com",
+      "symbol": "CL8Y",
+      "address": "0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tidaldex.com/images/tokens/0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF.png"
     }
   ]
 }

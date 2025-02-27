@@ -273,6 +273,13 @@ const tokens = {
     },
     decimals: 6,
   },
+  cl8y: {
+    symbol: 'CL8Y',
+    address: {
+      56: '0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF',
+    },
+    decimals: 18,
+  },
 }
 
 export default tokens
