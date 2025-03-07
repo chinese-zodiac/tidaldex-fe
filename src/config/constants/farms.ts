@@ -66,6 +66,16 @@ const farms: FarmConfig[] = [
   },
 
   {
+    pid: 28,
+    lpSymbol: 'CL8Y-CZB LP',
+    lpAddresses: {
+      56: '0xaf1BF0D65d2EF4D6B4a28a66b68AaB715c4936C5',
+    },
+    token: tokens.cl8y,
+    quoteToken: tokens.czb,
+  },
+
+  {
     pid: 26,
     lpSymbol: 'USTC-CZB LP',
     lpAddresses: {
