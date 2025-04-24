@@ -1,9 +1,9 @@
 {
   "name": "TidalDex Default List",
-  "timestamp": "2025-26-101T00:00:00Z",
+  "timestamp": "2025-04-23T00:00:00Z",
   "version": {
     "major": 5,
-    "minor": 3,
+    "minor": 4,
     "patch": 0
   },
   "tags": {},
@@ -235,6 +235,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://tidaldex.com/images/tokens/0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF.png"
+    },
+    {
+      "name": "Alpha Lunc Universe",
+      "symbol": "ALPHA",
+      "address": "0xd5fD8f461102b3B797adA37f60B29BfE802d117f",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tidaldex.com/images/tokens/0xd5fD8f461102b3B797adA37f60B29BfE802d117f.png"
     }
   ]
 }
