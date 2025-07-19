@@ -1,9 +1,9 @@
 {
   "name": "TidalDex Default List",
-  "timestamp": "2025-04-28T00:00:00Z",
+  "timestamp": "2025-07-18T00:00:00Z",
   "version": {
-    "major": 6,
-    "minor": 0,
+    "major": 7,
+    "minor": 1,
     "patch": 0
   },
   "tags": {},
@@ -231,10 +231,10 @@
     {
       "name": "CeramicLiberty.com",
       "symbol": "CL8Y",
-      "address": "0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF",
+      "address": "0x8F452a1fdd388A45e1080992eFF051b4dd9048d2",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://tidaldex.com/images/tokens/0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF.png"
+      "logoURI": "https://tidaldex.com/images/tokens/0x8F452a1fdd388A45e1080992eFF051b4dd9048d2.png"
     },
     {
       "name": "Alpha Lunc Universe",

@@ -32,7 +32,7 @@ export const USDT = new Token(ChainId.MAINNET, '0x55d398326f99059fF7754852469990
 export const BTCB = new Token(ChainId.MAINNET, '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18, 'BTC', 'BTC')
 export const CZB = new Token(ChainId.MAINNET, '0xd963b2236d227a0302e19f2f9595f424950dc186', 18, 'CZB', 'CZB')
 export const CZUSD = new Token(ChainId.MAINNET, '0xe68b79e51bf826534ff37aa9cee71a3842ee9c70', 18, 'CZUSD', 'CZUSD')
-export const CL8Y = new Token(ChainId.MAINNET, '0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF', 18, 'CL8Y', 'CL8Y')
+export const CL8Y = new Token(ChainId.MAINNET, '0x8F452a1fdd388A45e1080992eFF051b4dd9048d2', 18, 'CL8Y', 'CL8Y')
 
 export const UST = new Token(
   ChainId.MAINNET,
@@ -277,7 +277,7 @@ const tokens = {
   cl8y: {
     symbol: 'CL8Y',
     address: {
-      56: '0x999311589cc1Ed0065AD9eD9702cB593FFc62ddF',
+      56: '0x8F452a1fdd388A45e1080992eFF051b4dd9048d2',
     },
     decimals: 18,
   },
