@@ -9,7 +9,7 @@ import { range } from 'lodash'
 const POLL_TIME_IN_SECONDS = 10
 
 const usePollPredictions = () => {
-  const timer = useRef<NodeJS.Timeout>(null)
+  const timer = useRef<number | null>(null)
   const dispatch = useAppDispatch()
   const { account } = useWeb3React()
   const currentEpoch = useGetCurrentEpoch()
