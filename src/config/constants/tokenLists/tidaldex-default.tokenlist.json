@@ -1,9 +1,9 @@
 {
   "name": "TidalDex Default List",
-  "timestamp": "2025-07-18T00:00:00Z",
+  "timestamp": "2025-10-31T00:00:00Z",
   "version": {
     "major": 7,
-    "minor": 1,
+    "minor": 2,
     "patch": 0
   },
   "tags": {},
@@ -227,6 +227,14 @@
       "chainId": 56,
       "decimals": 6,
       "logoURI": "https://tidaldex.com/images/tokens/0x3d4350cD54aeF9f9b2C29435e0fa809957B3F30a.png"
+    },
+    {
+      "name": "USTC CL8Y Bridged",
+      "symbol": "USTC-CB",
+      "address": "0xA4224f910102490Dc02AAbcBc6cb3c59Ff390055",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://tidaldex.com/images/tokens/0x23396cF899Ca06c4472205fC903bDB4de249D6fC.png"
     },
     {
       "name": "CeramicLiberty.com",
